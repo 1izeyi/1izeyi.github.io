@@ -1,0 +1,20 @@
+# main links links
+main:
+
+  - title: "News"
+    url: "/#-news"
+
+  - title: "Publications"
+    url: "/#-publications"
+
+  - title: "Honors and Awards"
+    url: "/#-honors-and-awards"
+
+  - title: "Talks and Services"
+    url: "/#-talks-and-Services"
+
+  - title: "Internships"
+    url: "/#-internships"
+
+  - title: "Educations"
+    url: "/#-educations"
