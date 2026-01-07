@@ -25,10 +25,11 @@ redirect_from:
 # 🎖 Honors and Awards
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*
+- *2023.09 - Now*, Master, Institute of Automation, Chinese Academy of Sciences
 
 # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+- *2025.7 - Now*, AI Researcher, Lightwheel.
+- *2024.10 - Now*, Research Assistant, Beijing University.
