@@ -29,7 +29,7 @@ redirect_from:
 
 [LeHome: A Simulation Environment for Deformable Object Manipulation in Household Scenarios](https://openreview.net/pdf?id=rEDd1HorJl)
 
-Zeyi Li, Jade Yang, Jingkai Xu, Shangbin Xie, Tianxing Chen, Yuran Wang, Zhenhao Shen, Yan Shen, Yukun Zheng, Wenjun Li, Chaorui Zhang, Ming Chen, Chen Xie, Ruihai Wu
+**Zeyi Li**, Jade Yang, Jingkai Xu, Shangbin Xie, Tianxing Chen, Yuran Wang, Zhenhao Shen, Yan Shen, Yukun Zheng, Wenjun Li, Chaorui Zhang, Ming Chen, Chen Xie, Ruihai Wu
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
