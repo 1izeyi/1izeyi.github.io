@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeyi Li | Research Homepage</title>
+    <meta
+      name="description"
+      content="Research homepage of Zeyi Li, focused on embodied AI, robot learning, and manipulation systems."
+    >
+    <meta name="theme-color" content="#eef2f6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets/images/rose-mark.svg">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-one" aria-hidden="true"></div>
+      <div class="ambient ambient-two" aria-hidden="true"></div>
+      <div class="ambient ambient-three" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <div class="container">
+          <div class="nav-shell glass-panel">
+            <a class="brand" href="#about" aria-label="Go to homepage">
+              <img class="brand-rose" src="assets/images/rose-mark.svg" alt="" aria-hidden="true">
+              <span class="brand-copy">
+                <strong id="brand-name">Zeyi Li</strong>
+                <span id="brand-subtitle">Embodied AI</span>
+              </span>
+            </a>
+
+            <nav class="site-nav" id="site-nav" aria-label="Primary"></nav>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero section container" id="about" data-section data-reveal>
+          <div class="hero-shell glass-panel" data-reveal>
+            <div class="portrait-panel interactive-surface" data-magnetic>
+              <div class="portrait-frame">
+                <img
+                  id="hero-avatar"
+                  class="portrait-image"
+                  src="assets/images/zeyi-hero.jpg"
+                  alt="Portrait of Zeyi Li"
+                  fetchpriority="high"
+                >
+              </div>
+            </div>
+
+            <div class="hero-copy">
+              <p class="eyebrow" id="hero-kicker">Embodied AI / Robot Learning</p>
+              <h1 id="hero-name">Zeyi Li</h1>
+              <p class="hero-headline" id="hero-headline">M.S. Student at CASIA</p>
+              <p class="hero-summary" id="hero-summary">
+                Embodied AI, robot learning, and manipulation.
+              </p>
+
+              <div class="hero-meta">
+                <div class="hero-meta-item">
+                  <span class="meta-label">Affiliation</span>
+                  <span id="hero-affiliation"></span>
+                </div>
+                <div class="hero-meta-item">
+                  <span class="meta-label">Location</span>
+                  <span id="hero-location"></span>
+                </div>
+                <div class="hero-meta-item">
+                  <span class="meta-label">Status</span>
+                  <span id="hero-status"></span>
+                </div>
+              </div>
+
+              <div class="hero-actions" id="hero-actions"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section container" id="publications" data-section>
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Selected Publications</p>
+            <h2>Selected Publications</h2>
+          </div>
+
+          <div class="publications-grid" id="publications-grid"></div>
+        </section>
+
+        <section class="section container" id="timeline" data-section>
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Timeline</p>
+            <h2>Experience &amp; Education</h2>
+          </div>
+
+          <div class="timeline-list" id="timeline-list"></div>
+        </section>
+
+        <section class="section container" id="honors" data-section>
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Honors</p>
+            <h2>Honors &amp; Awards</h2>
+          </div>
+
+          <div class="awards-grid" id="awards-grid"></div>
+        </section>
+
+        <section class="section container" id="contact" data-section>
+          <div class="contact-panel glass-panel" data-reveal>
+            <div class="contact-copy">
+              <p class="eyebrow">Contact</p>
+              <h2 id="contact-title">Contact</h2>
+              <p id="contact-body">Email is the best way to reach me.</p>
+            </div>
+
+            <div class="contact-actions" id="contact-actions"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="container site-footer">
+        <div class="footer-panel glass-panel">
+          <div>
+            <strong id="footer-brand">Zeyi Li</strong>
+            <p id="footer-note"></p>
+          </div>
+
+          <div class="footer-meta">
+            <a class="glass-button ghost interactive-surface" data-magnetic href="#about">
+              <span>Back to Top</span>
+              <span class="button-arrow" aria-hidden="true">&uarr;</span>
+            </a>
+            <span id="footer-year"></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <noscript>
+      <div class="noscript-warning">
+        This homepage uses JavaScript to render content from one editable data file.
+      </div>
+    </noscript>
+
+    <script src="data/site-content.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
