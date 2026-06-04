@@ -182,8 +182,7 @@
           <span class="timeline-range">${item.range}</span>
         </div>
         <h3>${item.title}</h3>
-        <p class="timeline-org">${item.org}${item.location ? ` - ${item.location}` : ""}</p>
-        ${item.description ? `<p class="timeline-description">${item.description}</p>` : ""}
+        <p class="timeline-org">${item.org}</p>
       `;
       list.appendChild(card);
     });
