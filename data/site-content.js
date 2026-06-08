@@ -112,13 +112,17 @@ window.siteContent = {
       org: "Peking University",
     },
     {
-      range: "2023.09 - Present",
+      range: "2023.09 - 2026.06",
       kind: "Education",
       title: "Master's Student",
       org: "Institute of Automation, Chinese Academy of Sciences",
     },
   ],
   awards: [
+    {
+      year: "2026",
+      title: "Best Poster Award, CEAI 2026",
+    },
     {
       year: "2025",
       title: "Best Poster Award, IROS 2025 Workshop ROMADO",
