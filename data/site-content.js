@@ -10,6 +10,7 @@ window.siteContent = {
   navigation: [
     { label: "About", href: "#about" },
     { label: "Publications", href: "#publications" },
+    { label: "Projects", href: "#projects" },
     { label: "Timeline", href: "#timeline" },
     { label: "Honors", href: "#honors" },
     { label: "Contact", href: "#contact" },
@@ -98,6 +99,7 @@ window.siteContent = {
       note: "",
     },
   ],
+  projects: [],
   timeline: [
     {
       range: "2025.07 - Present",
@@ -106,7 +108,7 @@ window.siteContent = {
       org: "Lightwheel",
     },
     {
-      range: "2024.10 - Present",
+      range: "2024.10 - 2025.06",
       kind: "Experience",
       title: "Research Assistant",
       org: "Peking University",
@@ -127,11 +129,7 @@ window.siteContent = {
       year: "2025",
       title: "Best Poster Award, IROS 2025 Workshop ROMADO",
     },
-    {
-      year: "2024",
-      title: "Merit Student Award, University of Chinese Academy of Sciences",
-    },
-    {
+{
       year: "2020",
       title: "National First Prize, DJI RoboMaster 2020 Competition",
     },

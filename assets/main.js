@@ -464,10 +464,37 @@
     });
   }
 
+  function renderProjects() {
+    const grid = $("#projects-grid");
+    grid.innerHTML = "";
+
+    (content.projects || []).forEach((project) => {
+      const card = document.createElement("article");
+      card.className = "project-card glass-panel interactive-surface";
+      card.dataset.magnetic = "true";
+      card.dataset.reveal = "true";
+      card.innerHTML = `
+        <div class="project-copy">
+          <h3>${project.title}</h3>
+          ${project.description ? `<p class="project-desc">${project.description}</p>` : ""}
+          ${project.link ? `
+          <div class="publication-actions">
+            <a class="glass-button secondary interactive-surface" data-magnetic href="${project.link}" target="_blank" rel="noreferrer noopener">
+              <span>View Project</span>
+              <span class="button-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+          </div>` : ""}
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
   renderMeta();
   renderNavigation();
   renderHero();
   renderPublications();
+  renderProjects();
   renderTimeline();
   renderAwards();
   renderContact();
