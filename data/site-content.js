@@ -79,6 +79,7 @@ window.siteContent = {
         "Hao Dong",
       ],
       highlightAuthors: ["Zeyi Li"],
+      coFirstAuthors: ["Yan Shen", "Ruihai Wu"],
       note: "",
     },
     {
@@ -101,9 +102,9 @@ window.siteContent = {
   ],
   projects: [
     {
-      title: "Core Organizer",
+      title: "LeHome Challenge 2026",
       range: "2025.11 - 2026.06",
-      role: "LeHome Challenge 2026",
+      role: "Core Organizer",
       description: "1st Simulation-Driven Competition on Deformable Object Manipulation at ICRA 2026, focused on Garment Manipulation Skill Learning in Household Scenarios.",
       link: "",
     },

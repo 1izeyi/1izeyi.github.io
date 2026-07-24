@@ -113,11 +113,14 @@
 
   function renderAuthors(publication) {
     return publication.authors
-      .map((author) =>
-        publication.highlightAuthors.includes(author)
-          ? `<span class="author-emphasis">${author}</span>`
-          : `<span>${author}</span>`
-      )
+      .map((author) => {
+        const isHighlight = publication.highlightAuthors.includes(author);
+        const isCo = (publication.coFirstAuthors || []).includes(author);
+        const star = isCo ? `<sup>*</sup>` : "";
+        return isHighlight
+          ? `<span class="author-emphasis">${author}${star}</span>`
+          : `<span>${author}${star}</span>`;
+      })
       .join(", ");
   }
 
