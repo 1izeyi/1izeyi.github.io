@@ -116,10 +116,12 @@
       .map((author) => {
         const isHighlight = publication.highlightAuthors.includes(author);
         const isCo = (publication.coFirstAuthors || []).includes(author);
+        const isCorresponding = (publication.correspondingAuthors || []).includes(author);
         const star = isCo ? `<sup>*</sup>` : "";
+        const dagger = isCorresponding ? `<sup>&dagger;</sup>` : "";
         return isHighlight
-          ? `<span class="author-emphasis">${author}${star}</span>`
-          : `<span>${author}${star}</span>`;
+          ? `<span class="author-emphasis">${author}${star}${dagger}</span>`
+          : `<span>${author}${star}${dagger}</span>`;
       })
       .join(", ");
   }

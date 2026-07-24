@@ -60,6 +60,7 @@ window.siteContent = {
         "Ruihai Wu",
       ],
       highlightAuthors: ["Zeyi Li"],
+      correspondingAuthors: ["Ruihai Wu"],
       note: "",
     },
     {
@@ -80,6 +81,7 @@ window.siteContent = {
       ],
       highlightAuthors: ["Zeyi Li"],
       coFirstAuthors: ["Yan Shen", "Ruihai Wu"],
+      correspondingAuthors: ["Hao Dong"],
       note: "",
     },
     {
@@ -97,6 +99,8 @@ window.siteContent = {
         "Hao Dong",
       ],
       highlightAuthors: ["Zeyi Li"],
+      coFirstAuthors: ["Chenrui Tie", "Yue Chen", "Ruihai Wu"],
+      correspondingAuthors: ["Hao Dong"],
       note: "",
     },
   ],
