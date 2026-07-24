@@ -1243,10 +1243,15 @@ img {
 .award-card {
   --motion-scale: 0.44;
   --tilt-scale: 0.2;
-  min-height: 154px;
+  min-height: 108px;
   display: grid;
-  align-content: space-between;
+  grid-template-rows: auto 1fr;
   gap: 12px;
+}
+
+.award-card h3 {
+  margin-top: 0;
+  align-self: center;
 }
 
 .contact-panel,
