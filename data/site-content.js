@@ -9,10 +9,10 @@ window.siteContent = {
   },
   navigation: [
     { label: "About", href: "#about" },
-    { label: "Publications", href: "#publications" },
-    { label: "Projects", href: "#projects" },
+    { label: "Publication", href: "#publications" },
+    { label: "Project", href: "#projects" },
     { label: "Timeline", href: "#timeline" },
-    { label: "Honors", href: "#honors" },
+    { label: "Honor", href: "#honors" },
     { label: "Contact", href: "#contact" },
   ],
   profile: {
@@ -99,7 +99,15 @@ window.siteContent = {
       note: "",
     },
   ],
-  projects: [],
+  projects: [
+    {
+      title: "Core Organizer",
+      range: "2025.11 - 2026.06",
+      role: "LeHome Challenge 2026",
+      description: "1st Simulation-Driven Competition on Deformable Object Manipulation at ICRA 2026, focused on Garment Manipulation Skill Learning in Household Scenarios.",
+      link: "",
+    },
+  ],
   timeline: [
     {
       range: "2025.07 - Present",

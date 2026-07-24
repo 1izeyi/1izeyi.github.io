@@ -178,7 +178,6 @@
       card.innerHTML = `
         <span class="timeline-dot" aria-hidden="true"></span>
         <div class="timeline-topline">
-          <span class="timeline-kind">${item.kind}</span>
           <span class="timeline-range">${item.range}</span>
         </div>
         <h3>${item.title}</h3>
@@ -470,21 +469,24 @@
 
     (content.projects || []).forEach((project) => {
       const card = document.createElement("article");
-      card.className = "project-card glass-panel interactive-surface";
+      card.className = "timeline-item glass-panel interactive-surface";
       card.dataset.magnetic = "true";
       card.dataset.reveal = "true";
       card.innerHTML = `
-        <div class="project-copy">
-          <h3>${project.title}</h3>
-          ${project.description ? `<p class="project-desc">${project.description}</p>` : ""}
-          ${project.link ? `
-          <div class="publication-actions">
-            <a class="glass-button secondary interactive-surface" data-magnetic href="${project.link}" target="_blank" rel="noreferrer noopener">
-              <span>View Project</span>
-              <span class="button-arrow" aria-hidden="true">&nearr;</span>
-            </a>
-          </div>` : ""}
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-topline">
+          <span class="timeline-range">${project.range || ""}</span>
         </div>
+        <h3>${project.title}</h3>
+        ${project.role ? `<p class="timeline-org">${project.role}</p>` : ""}
+        ${project.description ? `<p class="project-desc">${project.description}</p>` : ""}
+        ${project.link ? `
+        <div class="publication-actions">
+          <a class="glass-button secondary interactive-surface" data-magnetic href="${project.link}" target="_blank" rel="noreferrer noopener">
+            <span>View Project</span>
+            <span class="button-arrow" aria-hidden="true">&nearr;</span>
+          </a>
+        </div>` : ""}
       `;
       grid.appendChild(card);
     });

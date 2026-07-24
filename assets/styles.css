@@ -921,6 +921,7 @@ img {
 .highlight-card h3,
 .publication-copy h3,
 .timeline-item h3,
+.project-card h3,
 .award-card h3 {
   font-size: clamp(1.24rem, 1.5vw, 1.54rem);
   line-height: 1.16;
@@ -935,18 +936,53 @@ img {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 20px;
 }
 
 .project-card {
-  padding: 22px;
-  border-radius: var(--radius-card);
+  --motion-scale: 0.34;
+  --tilt-scale: 0.14;
+  padding: 24px 24px 24px 80px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.16) 34%, rgba(232, 229, 223, 0.08)),
+    linear-gradient(140deg, rgba(255, 255, 255, 0.22), rgba(224, 220, 214, 0.12) 60%, rgba(209, 205, 198, 0.06)),
+    rgba(255, 255, 255, 0.04);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.16) inset,
+    0 1px 0 rgba(255, 255, 255, 0.96) inset,
+    0 -1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 4px 22px rgba(255, 255, 255, 0.08) inset,
+    0 22px 58px rgba(38, 52, 76, 0.1);
+  backdrop-filter: blur(34px) saturate(175%) brightness(1.03);
+  -webkit-backdrop-filter: blur(34px) saturate(175%) brightness(1.03);
+}
+
+.project-topline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-card h3 {
+  font-size: clamp(1.24rem, 1.5vw, 1.54rem);
+  line-height: 1.16;
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: rgba(8, 19, 32, 0.96);
+}
+
+.project-card .timeline-org {
+  margin: 4px 0 0;
 }
 
 .project-desc {
   color: var(--text-soft);
-  margin: 8px 0 0;
+  font-size: 0.93rem;
+  margin: 4px 0 0;
 }
 
 .publication-card {
@@ -1149,6 +1185,7 @@ img {
 }
 
 .timeline-item h3,
+.project-card h3,
 .publication-copy h3,
 .award-card h3,
 .highlight-card h3 {
