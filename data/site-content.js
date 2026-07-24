@@ -18,9 +18,9 @@ window.siteContent = {
   profile: {
     name: "Zeyi Li",
     kicker: "Embodied AI / Robot Learning",
-    headline: "M.S. Student at CASIA",
-    summary: "Embodied AI, robot learning, and manipulation.",
-    affiliation: "Institute of Automation, Chinese Academy of Sciences (CASIA)",
+    headline: "PhD Candidate",
+    summary: "Simulation, Learning, and Manipulation.",
+    affiliation: "TBD",
     location: "Beijing, China",
     availability: "Seeking PhD positions.",
     avatar: "assets/images/zeyi-hero.jpg",
@@ -129,7 +129,7 @@ window.siteContent = {
       year: "2025",
       title: "Best Poster Award, IROS 2025 Workshop ROMADO",
     },
-{
+    {
       year: "2020",
       title: "National First Prize, DJI RoboMaster 2020 Competition",
     },
