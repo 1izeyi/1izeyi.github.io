@@ -367,19 +367,13 @@ img {
   letter-spacing: -0.05em;
 }
 
-.brand-copy span {
-  color: rgba(92, 101, 117, 0.82);
-  font-size: 0.78rem;
-  letter-spacing: -0.01em;
-}
-
 .site-nav {
   position: relative;
   flex: 1 1 auto;
   min-width: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: nowrap;
   gap: 6px;
   padding: 7px;
@@ -634,28 +628,12 @@ img {
   font-weight: 700;
 }
 
-.hero-headline {
-  margin: 18px 0 12px;
-  max-width: 20ch;
-  font-size: clamp(1.22rem, 2vw, 1.66rem);
-  line-height: 1.18;
-  color: rgba(12, 23, 39, 0.94);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-}
-
-.hero-summary,
 .publication-note,
 .contact-copy p,
 #footer-note {
   margin: 0;
   color: rgba(10, 21, 37, 0.7);
   line-height: 1.78;
-}
-
-.hero-summary {
-  max-width: 54ch;
-  font-size: 1rem;
 }
 
 .hero-meta {
@@ -1216,6 +1194,12 @@ img {
   }
 }
 
+@media (min-width: 861px) {
+  .nav-shell {
+    width: fit-content;
+  }
+}
+
 @media (max-width: 1100px) {
   .hero-shell {
     grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
@@ -1314,10 +1298,6 @@ img {
 
   .hero-copy h1 {
     font-size: clamp(3rem, 15vw, 4.5rem);
-  }
-
-  .hero-headline {
-    font-size: 1.16rem;
   }
 
   .hero-meta-item {

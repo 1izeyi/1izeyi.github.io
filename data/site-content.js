@@ -4,9 +4,6 @@ window.siteContent = {
     description:
       "Research homepage of Zeyi Li, focused on embodied AI, robot learning, and manipulation systems.",
   },
-  brand: {
-    subtitle: "Embodied AI",
-  },
   navigation: [
     { label: "About", href: "#about" },
     { label: "Publications", href: "#publications" },
@@ -15,12 +12,9 @@ window.siteContent = {
   ],
   profile: {
     name: "Zeyi Li",
-    kicker: "Embodied AI / Robot Learning",
-    headline: "PhD Candidate",
-    summary: "Simulation, Learning, and Manipulation.",
+    kicker: "Robotics Researcher",
     affiliation: "TBD",
     location: "Beijing, China",
-    availability: "Incoming PhD",
     avatar: "assets/images/zeyi-hero.jpg",
   },
   links: {

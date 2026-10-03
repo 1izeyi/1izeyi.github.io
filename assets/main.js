@@ -50,7 +50,6 @@
     }
 
     $("#brand-name").textContent = content.profile.name;
-    $("#brand-subtitle").textContent = content.brand.subtitle || "";
     $("#footer-brand").textContent = content.profile.name;
     $("#footer-year").textContent = new Date().getFullYear();
   }
@@ -77,11 +76,8 @@
   function renderHero() {
     $("#hero-kicker").textContent = content.profile.kicker;
     $("#hero-name").textContent = content.profile.name;
-    $("#hero-headline").textContent = content.profile.headline;
-    $("#hero-summary").textContent = content.profile.summary || "";
     $("#hero-affiliation").textContent = content.profile.affiliation;
     $("#hero-location").textContent = content.profile.location;
-    $("#hero-status").textContent = content.profile.availability || "";
     $("#hero-avatar").src = content.profile.avatar;
     $("#hero-avatar").alt = `Portrait of ${content.profile.name}`;
 
