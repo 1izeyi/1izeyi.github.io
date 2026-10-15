@@ -1,0 +1,102 @@
+/* Base: variables, reset, page background, shared utilities */
+
+:root {
+  color-scheme: light;
+  --bg-top: #faf9f6;
+  --bg-mid: #f0ede8;
+  --bg-bottom: #dbd7d0;
+  --ink: #0a1525;
+  --text-1: rgba(10, 21, 37, 0.95);
+  --text-2: rgba(10, 21, 37, 0.8);
+  --text-3: rgba(10, 21, 37, 0.55);
+  --fs-display: clamp(3.4rem, 6vw, 5.6rem);
+  --fs-section: clamp(2.2rem, 3.3vw, 3.3rem);
+  --fs-title: clamp(1.1rem, 1.4vw, 1.3rem);
+  --fs-body: 1.05rem;
+  --fs-small: 0.93rem;
+  --fs-label: 0.8rem;
+  --line: rgba(255, 255, 255, 0.54);
+  --line-strong: rgba(255, 255, 255, 0.88);
+  --shadow: 0 24px 60px rgba(28, 33, 40, 0.1);
+  --shadow-strong: 0 32px 88px rgba(21, 26, 32, 0.14);
+  --radius-panel: 38px;
+  --radius-card: 30px;
+  --radius-pill: 999px;
+  --max-width: 1180px;
+  --pad-card: 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-2);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 26%),
+    radial-gradient(circle at 80% 18%, rgba(223, 232, 242, 0.55), rgba(223, 232, 242, 0) 36%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-mid) 44%, var(--bg-bottom));
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0) 30%),
+    radial-gradient(circle at 84% 8%, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0) 24%),
+    radial-gradient(circle at 26% 88%, rgba(223, 232, 242, 0.42), rgba(223, 232, 242, 0) 34%);
+  filter: blur(60px);
+}
+
+body::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.028;
+  mix-blend-mode: multiply;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 36px 0;
+  scroll-margin-top: 124px;
+}
+
+.noscript-warning {
+  margin: 12px auto 0;
+  width: min(var(--max-width), calc(100% - 32px));
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 246, 224, 0.92);
+  color: #7a5d12;
+  font-weight: 600;
+}

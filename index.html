@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeyi Li | National University of Singapore</title>
+  <meta name="description"
+    content="Homepage of Zeyi Li, an incoming PhD student at the National University of Singapore specializing in robotics.">
+  <meta name="theme-color" content="#eef2f6">
+  <link rel="icon" type="image/svg+xml" href="assets/images/nus-crest.svg">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/nus-crest.png">
+  <link rel="apple-touch-icon" href="assets/images/nus-crest.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="container">
+        <div class="nav-shell glass-panel">
+          <nav class="site-nav" id="site-nav" aria-label="Primary"></nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section container" id="about" data-section data-reveal>
+        <div class="hero-shell glass-panel" data-reveal>
+          <div class="portrait-panel">
+            <div class="portrait-frame">
+              <img id="hero-avatar" class="portrait-image" src="assets/images/zeyi-hero.jpg" alt="Portrait of Zeyi Li"
+                fetchpriority="high">
+            </div>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow" id="hero-kicker"></p>
+            <h1 id="hero-name"></h1>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <span class="meta-label">Status</span>
+                <span id="hero-status"></span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="meta-label">Affiliation</span>
+                <span id="hero-affiliation"></span>
+              </div>
+              <div class="hero-meta-item hero-meta-advisors">
+                <span class="meta-label">Advisors</span>
+                <span id="hero-advisors"></span>
+              </div>
+            </div>
+
+            <div class="hero-actions" id="hero-actions"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="news" data-section>
+        <div class="section-heading" data-reveal>
+          <h2>News</h2>
+        </div>
+
+        <div class="news-panel glass-panel" data-reveal id="news-list"></div>
+      </section>
+
+      <section class="section container" id="publications" data-section>
+        <div class="section-heading" data-reveal>
+          <h2>Publications</h2>
+        </div>
+
+        <div class="publications-grid" id="publications-grid"></div>
+      </section>
+
+      <section class="section container" id="projects" data-section>
+        <div class="section-heading" data-reveal>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"></div>
+      </section>
+
+      <section class="section container" id="honors" data-section>
+        <div class="section-heading" data-reveal>
+          <h2>Honors</h2>
+        </div>
+
+        <div class="honors-list" id="honors-list"></div>
+      </section>
+    </main>
+
+    <footer class="container site-footer">
+      <a class="glass-button ghost interactive-surface back-to-top" href="#about">
+        <span>Back to Top</span>
+        <span class="button-arrow" aria-hidden="true">&uarr;</span>
+      </a>
+    </footer>
+  </div>
+
+  <noscript>
+    <div class="noscript-warning">
+      This homepage uses JavaScript to render content from one editable data file.
+    </div>
+  </noscript>
+
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="lg-refract" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.012" numOctaves="2" seed="7" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="1.6" result="soft" />
+        <feDisplacementMap in="SourceGraphic" in2="soft" scale="26" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
