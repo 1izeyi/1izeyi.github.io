@@ -38,6 +38,8 @@ export default {
   ],
   news: [
     { date: "2026.10", text: "🎉 Admitted to SoC, NUS! Grateful to everyone who helped me, especially my advisors and <a href=\"https://scholar.google.com/citations?user=qVyvE6UAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noreferrer noopener\">Dr. Ruihai Wu</a>!" },
+    { date: "2026.06", text: "🤖 We successfully hosted the LeHome Challenge on-site finals at ICRA 2026 in Vienna!" },
+    { date: "2025.10", text: "🏆 My first-author work, LeHome, won the Best Poster Award at IROS 2025 ROMADO!" },
   ],
   publications: [
     {
