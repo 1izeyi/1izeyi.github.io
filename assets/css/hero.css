@@ -96,6 +96,17 @@
   letter-spacing: -0.02em;
 }
 
+#hero-affiliation {
+  text-decoration: underline dashed;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+#hero-affiliation:hover,
+#hero-affiliation:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;

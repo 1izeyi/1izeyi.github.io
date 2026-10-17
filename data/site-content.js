@@ -13,10 +13,10 @@ export default {
   ],
   profile: {
     name: "Zeyi Li",
-    kicker: "Robotics Researcher",
+    kicker: "National University of Singapore",
     status: "Incoming PhD",
     advisors: ["Prof. Shuicheng Yan", "Prof. Zhenkai Liang"],
-    affiliation: "National University of Singapore",
+    affiliation: "LV-Lab, NUS",
     avatar: "assets/images/zeyi-hero.jpg",
   },
   links: {
