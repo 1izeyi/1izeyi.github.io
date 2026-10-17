@@ -33,7 +33,22 @@ export function renderHero() {
   $("#hero-kicker").textContent = content.profile.kicker;
   $("#hero-name").textContent = content.profile.name;
   $("#hero-status").textContent = content.profile.status;
-  $("#hero-advisors").textContent = (content.profile.advisors || []).join(" & ");
+
+  const advisors = $("#hero-advisors");
+  advisors.innerHTML = "";
+  (content.profile.advisors || []).forEach((advisor, index) => {
+    if (index > 0) {
+      advisors.appendChild(document.createTextNode(" & "));
+    }
+
+    const link = document.createElement("a");
+    link.textContent = advisor.name;
+    link.href = advisor.href;
+    link.target = "_blank";
+    link.rel = "noreferrer noopener";
+    advisors.appendChild(link);
+  });
+
   $("#hero-affiliation").textContent = content.profile.affiliation;
   $("#hero-avatar").src = content.profile.avatar;
   $("#hero-avatar").alt = `Portrait of ${content.profile.name}`;

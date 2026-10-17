@@ -15,12 +15,16 @@ export default {
     name: "Zeyi Li",
     kicker: "National University of Singapore",
     status: "Incoming PhD",
-    advisors: ["Prof. Shuicheng Yan", "Prof. Zhenkai Liang"],
+    advisors: [
+      { name: "Prof. Shuicheng Yan", href: "https://scholar.google.com/citations?user=DNuiPHwAAAAJ&hl=en" },
+      { name: "Prof. Zhenkai Liang", href: "https://scholar.google.com/citations?user=SXfOJjcAAAAJ&hl=en" },
+    ],
     affiliation: "LV-Lab, NUS",
     avatar: "assets/images/zeyi-hero.jpg",
   },
   links: {
     email: "mailto:lizeyi.cn@gmail.com",
+    linkedin: "https://www.linkedin.com/in/lizeyi/",
     github: "https://github.com/1izeyi",
     huggingface: "https://huggingface.co/1izeyi",
     scholar: "",
@@ -28,6 +32,7 @@ export default {
   },
   heroActions: [
     { label: "Email", type: "external", key: "email", style: "primary", icon: "mail" },
+    { label: "LinkedIn", type: "external", key: "linkedin", style: "secondary", icon: "linkedin" },
     { label: "GitHub", type: "external", key: "github", style: "secondary", icon: "github" },
     { label: "Hugging Face", type: "external", key: "huggingface", style: "secondary", icon: "huggingface" },
   ],
