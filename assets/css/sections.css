@@ -140,6 +140,17 @@
   line-height: 1.65;
 }
 
+.news-text a {
+  text-decoration: underline dashed;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.news-text a:hover,
+.news-text a:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
 .news-item:first-child .news-text {
   color: var(--text-1);
   font-weight: 700;

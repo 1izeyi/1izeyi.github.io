@@ -37,7 +37,7 @@ export default {
     { label: "Hugging Face", type: "external", key: "huggingface", style: "secondary", icon: "huggingface" },
   ],
   news: [
-    { date: "2026.10", text: "🎉 Admitted to the PhD program at SoC, NUS! Grateful to everyone who helped me!" },
+    { date: "2026.10", text: "🎉 Admitted to SoC, NUS! Grateful to everyone who helped me, especially my advisors and <a href=\"https://scholar.google.com/citations?user=qVyvE6UAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noreferrer noopener\">Dr. Ruihai Wu</a>!" },
   ],
   publications: [
     {
