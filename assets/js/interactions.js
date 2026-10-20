@@ -209,8 +209,8 @@ export function initMagneticButtons() {
 
   const buttons = [...document.querySelectorAll(".glass-button")];
   const radius = 90;
-  const strength = 0.05;
-  const maxOffset = 2;
+  const strength = 0.025;
+  const maxOffset = 1;
 
   window.addEventListener(
     "pointermove",
@@ -254,8 +254,11 @@ export function initHeroParallax() {
       }
 
       const rect = hero.getBoundingClientRect();
-      shell.style.setProperty("--parallax-x", ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3));
-      shell.style.setProperty("--parallax-y", ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3));
+      const nx = (event.clientX - rect.left) / rect.width - 0.5;
+      const ny = (event.clientY - rect.top) / rect.height - 0.5;
+
+      shell.style.setProperty("--parallax-x", nx.toFixed(3));
+      shell.style.setProperty("--parallax-y", ny.toFixed(3));
     },
     { passive: true }
   );
@@ -263,6 +266,44 @@ export function initHeroParallax() {
   hero.addEventListener("pointerleave", () => {
     shell.style.setProperty("--parallax-x", "0");
     shell.style.setProperty("--parallax-y", "0");
+  });
+}
+
+export function initPortraitHolo() {
+  const panel = document.querySelector(".portrait-panel");
+
+  if (reduceMotion || !finePointer || !panel) {
+    return;
+  }
+
+  const frame = panel.querySelector(".portrait-frame");
+
+  if (!frame) {
+    return;
+  }
+
+  panel.addEventListener(
+    "pointermove",
+    (event) => {
+      if (event.pointerType !== "mouse") {
+        return;
+      }
+
+      const rect = frame.getBoundingClientRect();
+      const px = (event.clientX - rect.left) / rect.width;
+      const py = (event.clientY - rect.top) / rect.height;
+
+      frame.style.setProperty("--portrait-rx", `${((0.5 - py) * 20).toFixed(2)}deg`);
+      frame.style.setProperty("--portrait-ry", `${((px - 0.5) * 24).toFixed(2)}deg`);
+      frame.style.setProperty("--glare-x", (px * 100).toFixed(1));
+      frame.style.setProperty("--glare-y", (py * 100).toFixed(1));
+    },
+    { passive: true }
+  );
+
+  panel.addEventListener("pointerleave", () => {
+    frame.style.setProperty("--portrait-rx", "0deg");
+    frame.style.setProperty("--portrait-ry", "0deg");
   });
 }
 

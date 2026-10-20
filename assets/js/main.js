@@ -16,6 +16,7 @@ import {
   initPublicationFilter,
   initMagneticButtons,
   initHeroParallax,
+  initPortraitHolo,
   initScrollProgress,
 } from "./interactions.js";
 import { initCursorGlow } from "./cursor-glow.js";
@@ -35,6 +36,7 @@ if (content) {
   initPublicationFilter();
   initMagneticButtons();
   initHeroParallax();
+  initPortraitHolo();
   initScrollProgress();
   initCursorGlow();
 }
