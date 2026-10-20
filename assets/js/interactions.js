@@ -200,6 +200,96 @@ export function initPublicationFilter() {
   });
 }
 
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+export function initMagneticButtons() {
+  if (reduceMotion || !finePointer) {
+    return;
+  }
+
+  const buttons = [...document.querySelectorAll(".glass-button")];
+  const radius = 90;
+  const strength = 0.05;
+  const maxOffset = 2;
+
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      if (event.pointerType !== "mouse") {
+        return;
+      }
+
+      buttons.forEach((button) => {
+        const rect = button.getBoundingClientRect();
+        const dx = event.clientX - (rect.left + rect.width / 2);
+        const dy = event.clientY - (rect.top + rect.height / 2);
+
+        if (Math.hypot(dx, dy) < radius + Math.max(rect.width, rect.height) / 2) {
+          const ox = Math.max(-maxOffset, Math.min(maxOffset, dx * strength));
+          const oy = Math.max(-maxOffset, Math.min(maxOffset, dy * strength));
+          button.style.translate = `${ox}px ${oy}px`;
+        } else if (button.style.translate) {
+          button.style.translate = "";
+        }
+      });
+    },
+    { passive: true }
+  );
+}
+
+export function initHeroParallax() {
+  const hero = $(".hero");
+
+  if (reduceMotion || !finePointer || !hero) {
+    return;
+  }
+
+  const shell = hero.querySelector(".hero-shell");
+
+  hero.addEventListener(
+    "pointermove",
+    (event) => {
+      if (event.pointerType !== "mouse") {
+        return;
+      }
+
+      const rect = hero.getBoundingClientRect();
+      shell.style.setProperty("--parallax-x", ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3));
+      shell.style.setProperty("--parallax-y", ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3));
+    },
+    { passive: true }
+  );
+
+  hero.addEventListener("pointerleave", () => {
+    shell.style.setProperty("--parallax-x", "0");
+    shell.style.setProperty("--parallax-y", "0");
+  });
+}
+
+export function initScrollProgress() {
+  const navShell = document.querySelector(".nav-shell");
+
+  if (!navShell) {
+    return;
+  }
+
+  const bar = document.createElement("span");
+  bar.className = "scroll-progress";
+  bar.setAttribute("aria-hidden", "true");
+  navShell.appendChild(bar);
+
+  function syncProgress() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    bar.style.transform = `scaleX(${progress})`;
+  }
+
+  window.addEventListener("scroll", syncProgress, { passive: true });
+  window.addEventListener("resize", syncProgress);
+  window.addEventListener("load", syncProgress);
+  syncProgress();
+}
+
 function spawnRipple(event) {
   const target = event.currentTarget;
   const ripple = document.createElement("span");

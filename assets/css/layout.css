@@ -68,6 +68,27 @@
   z-index: 2;
 }
 
+/* Scroll progress: thin gradient line pinned to the nav-shell bottom edge */
+.scroll-progress {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: 1px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(116, 146, 194, 0),
+    rgba(116, 146, 194, 0.7),
+    rgba(60, 170, 255, 0.7),
+    rgba(116, 146, 194, 0)
+  );
+  transform: scaleX(0);
+  transform-origin: left center;
+  pointer-events: none;
+  z-index: 3;
+}
+
 .site-nav {
   position: relative;
   flex: 1 1 auto;

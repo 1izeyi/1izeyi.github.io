@@ -1,5 +1,73 @@
 /* Hero (About section) */
 
+/* 1) Entrance choreography: shell fades up, inner items stagger */
+@keyframes hero-shell-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-shell {
+  animation: hero-shell-in 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-copy > *,
+.portrait-panel {
+  animation: hero-item-in 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-copy > *:nth-child(1) {
+  animation-delay: 140ms;
+}
+
+.hero-copy > *:nth-child(2) {
+  animation-delay: 220ms;
+}
+
+.hero-copy > *:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.hero-copy > *:nth-child(4) {
+  animation-delay: 380ms;
+}
+
+.portrait-panel {
+  animation-delay: 260ms;
+}
+
+/* 3) Pointer parallax: portrait drifts against the cursor, copy with it */
+.hero-shell {
+  --parallax-x: 0;
+  --parallax-y: 0;
+}
+
+.portrait-panel {
+  translate: calc(var(--parallax-x) * -12px) calc(var(--parallax-y) * -10px);
+  transition: translate 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-copy {
+  translate: calc(var(--parallax-x) * 6px) calc(var(--parallax-y) * 5px);
+  transition: translate 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 .hero {
   padding-top: 44px;
 }

@@ -34,6 +34,27 @@
   font-size: var(--fs-section);
   line-height: 0.96;
   color: var(--text-1);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Underline draws in once the heading is revealed */
+.section-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+  width: 46px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, rgba(116, 146, 194, 0.9), rgba(60, 170, 255, 0.5));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 720ms cubic-bezier(0.22, 1, 0.36, 1) 240ms;
+}
+
+.section-heading.is-visible h2::after {
+  transform: scaleX(1);
 }
 
 .section-heading--split {

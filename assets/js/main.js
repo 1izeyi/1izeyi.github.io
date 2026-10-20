@@ -14,6 +14,9 @@ import {
   initTopbarState,
   initInteractiveSurfaces,
   initPublicationFilter,
+  initMagneticButtons,
+  initHeroParallax,
+  initScrollProgress,
 } from "./interactions.js";
 import { initCursorGlow } from "./cursor-glow.js";
 
@@ -30,5 +33,8 @@ if (content) {
   initTopbarState();
   initInteractiveSurfaces();
   initPublicationFilter();
+  initMagneticButtons();
+  initHeroParallax();
+  initScrollProgress();
   initCursorGlow();
 }
