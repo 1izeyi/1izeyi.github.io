@@ -186,6 +186,20 @@ export function initTopbarState() {
   syncTopbar();
 }
 
+export function initPublicationFilter() {
+  const button = $("#publications-filter");
+  const grid = $("#publications-grid");
+
+  if (!button || !grid) {
+    return;
+  }
+
+  button.addEventListener("click", () => {
+    const filtered = grid.classList.toggle("is-filtered");
+    button.setAttribute("aria-pressed", String(filtered));
+  });
+}
+
 function spawnRipple(event) {
   const target = event.currentTarget;
   const ripple = document.createElement("span");

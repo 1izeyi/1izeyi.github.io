@@ -66,6 +66,7 @@ export default {
       ],
       highlightAuthors: ["Zeyi Li"],
       correspondingAuthors: ["Ruihai Wu"],
+      firstAuthor: true,
       note: "",
     },
     {

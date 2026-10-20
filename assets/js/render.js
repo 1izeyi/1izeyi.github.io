@@ -121,10 +121,11 @@ export function renderPublications() {
     const bodyId = `publication-body-${index}`;
     card.className = "publication-card glass-panel";
     card.dataset.reveal = "true";
+    card.dataset.firstAuthor = publication.firstAuthor ? "true" : "false";
     card.innerHTML = `
       <button class="publication-toggle" type="button" aria-expanded="false" aria-controls="${bodyId}">
         <span class="publication-badge">${publication.venue}</span>
-        <span class="publication-title">${publication.title}</span>
+        <span class="publication-title${publication.firstAuthor ? "" : " publication-title--light"}">${publication.title}</span>
       </button>
       <div class="publication-body" id="${bodyId}">
         <div class="publication-body-clip">

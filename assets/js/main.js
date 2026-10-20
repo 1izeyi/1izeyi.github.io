@@ -13,7 +13,9 @@ import {
   initReveal,
   initTopbarState,
   initInteractiveSurfaces,
+  initPublicationFilter,
 } from "./interactions.js";
+import { initCursorGlow } from "./cursor-glow.js";
 
 if (content) {
   renderMeta();
@@ -27,4 +29,6 @@ if (content) {
   initReveal();
   initTopbarState();
   initInteractiveSurfaces();
+  initPublicationFilter();
+  initCursorGlow();
 }
