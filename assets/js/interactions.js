@@ -269,44 +269,6 @@ export function initHeroParallax() {
   });
 }
 
-export function initPortraitHolo() {
-  const panel = document.querySelector(".portrait-panel");
-
-  if (reduceMotion || !finePointer || !panel) {
-    return;
-  }
-
-  const frame = panel.querySelector(".portrait-frame");
-
-  if (!frame) {
-    return;
-  }
-
-  panel.addEventListener(
-    "pointermove",
-    (event) => {
-      if (event.pointerType !== "mouse") {
-        return;
-      }
-
-      const rect = frame.getBoundingClientRect();
-      const px = (event.clientX - rect.left) / rect.width;
-      const py = (event.clientY - rect.top) / rect.height;
-
-      frame.style.setProperty("--portrait-rx", `${((0.5 - py) * 20).toFixed(2)}deg`);
-      frame.style.setProperty("--portrait-ry", `${((px - 0.5) * 24).toFixed(2)}deg`);
-      frame.style.setProperty("--glare-x", (px * 100).toFixed(1));
-      frame.style.setProperty("--glare-y", (py * 100).toFixed(1));
-    },
-    { passive: true }
-  );
-
-  panel.addEventListener("pointerleave", () => {
-    frame.style.setProperty("--portrait-rx", "0deg");
-    frame.style.setProperty("--portrait-ry", "0deg");
-  });
-}
-
 export function initScrollProgress() {
   const navShell = document.querySelector(".nav-shell");
 
