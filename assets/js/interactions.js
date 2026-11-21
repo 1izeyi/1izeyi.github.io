@@ -200,75 +200,6 @@ export function initPublicationFilter() {
   });
 }
 
-const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-
-export function initMagneticButtons() {
-  if (reduceMotion || !finePointer) {
-    return;
-  }
-
-  const buttons = [...document.querySelectorAll(".glass-button")];
-  const radius = 90;
-  const strength = 0.025;
-  const maxOffset = 1;
-
-  window.addEventListener(
-    "pointermove",
-    (event) => {
-      if (event.pointerType !== "mouse") {
-        return;
-      }
-
-      buttons.forEach((button) => {
-        const rect = button.getBoundingClientRect();
-        const dx = event.clientX - (rect.left + rect.width / 2);
-        const dy = event.clientY - (rect.top + rect.height / 2);
-
-        if (Math.hypot(dx, dy) < radius + Math.max(rect.width, rect.height) / 2) {
-          const ox = Math.max(-maxOffset, Math.min(maxOffset, dx * strength));
-          const oy = Math.max(-maxOffset, Math.min(maxOffset, dy * strength));
-          button.style.translate = `${ox}px ${oy}px`;
-        } else if (button.style.translate) {
-          button.style.translate = "";
-        }
-      });
-    },
-    { passive: true }
-  );
-}
-
-export function initHeroParallax() {
-  const hero = $(".hero");
-
-  if (reduceMotion || !finePointer || !hero) {
-    return;
-  }
-
-  const shell = hero.querySelector(".hero-shell");
-
-  hero.addEventListener(
-    "pointermove",
-    (event) => {
-      if (event.pointerType !== "mouse") {
-        return;
-      }
-
-      const rect = hero.getBoundingClientRect();
-      const nx = (event.clientX - rect.left) / rect.width - 0.5;
-      const ny = (event.clientY - rect.top) / rect.height - 0.5;
-
-      shell.style.setProperty("--parallax-x", nx.toFixed(3));
-      shell.style.setProperty("--parallax-y", ny.toFixed(3));
-    },
-    { passive: true }
-  );
-
-  hero.addEventListener("pointerleave", () => {
-    shell.style.setProperty("--parallax-x", "0");
-    shell.style.setProperty("--parallax-y", "0");
-  });
-}
-
 export function initScrollProgress() {
   const navShell = document.querySelector(".nav-shell");
 
@@ -318,34 +249,6 @@ export function initInteractiveSurfaces() {
         return;
       }
       spawnRipple(event);
-    });
-
-    if (reduceMotion) {
-      return;
-    }
-
-    surface.addEventListener("pointermove", (event) => {
-      const rect = surface.getBoundingClientRect();
-      const px = ((event.clientX - rect.left) / rect.width) * 100;
-      const py = ((event.clientY - rect.top) / rect.height) * 100;
-      const offsetX = ((event.clientX - rect.left) / rect.width - 0.5) * 6;
-      const offsetY = ((event.clientY - rect.top) / rect.height - 0.5) * 6;
-
-      surface.style.setProperty("--pointer-x", `${px}%`);
-      surface.style.setProperty("--pointer-y", `${py}%`);
-      surface.style.setProperty("--lift-x", `${offsetX}px`);
-      surface.style.setProperty("--lift-y", `${offsetY * -0.45}px`);
-      surface.style.setProperty("--rotate-y", `${offsetX * 0.08}deg`);
-      surface.style.setProperty("--rotate-x", `${offsetY * -0.08}deg`);
-    });
-
-    surface.addEventListener("pointerleave", () => {
-      surface.style.removeProperty("--pointer-x");
-      surface.style.removeProperty("--pointer-y");
-      surface.style.removeProperty("--lift-x");
-      surface.style.removeProperty("--lift-y");
-      surface.style.removeProperty("--rotate-x");
-      surface.style.removeProperty("--rotate-y");
     });
   });
 }

@@ -27,13 +27,14 @@ export default {
     linkedin: "https://www.linkedin.com/in/lizeyi/",
     github: "https://github.com/1izeyi",
     huggingface: "https://huggingface.co/1izeyi",
-    scholar: "",
+    scholar: "https://scholar.google.com/citations?hl=en&user=Cf13Sd0AAAAJ",
     cv: "",
   },
   heroActions: [
+    { label: "Google Scholar", type: "external", key: "scholar", style: "secondary", icon: "scholar" },
     { label: "Email", type: "external", key: "mail", style: "secondary", icon: "mail" },
-    { label: "LinkedIn", type: "external", key: "linkedin", style: "secondary", icon: "linkedin" },
     { label: "GitHub", type: "external", key: "github", style: "secondary", icon: "github" },
+    { label: "LinkedIn", type: "external", key: "linkedin", style: "secondary", icon: "linkedin" },
     { label: "Hugging Face", type: "external", key: "huggingface", style: "secondary", icon: "huggingface" },
   ],
   news: [

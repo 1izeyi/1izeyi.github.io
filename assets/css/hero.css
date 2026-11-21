@@ -47,17 +47,6 @@
   animation-delay: 380ms;
 }
 
-/* Pointer parallax: copy drifts with the cursor */
-.hero-shell {
-  --parallax-x: 0;
-  --parallax-y: 0;
-}
-
-.hero-copy {
-  translate: calc(var(--parallax-x) * 6px) calc(var(--parallax-y) * 5px);
-  transition: translate 480ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 .hero {
   padding-top: 44px;
 }
@@ -177,8 +166,6 @@
 }
 
 .portrait-panel {
-  --motion-scale: 0.55;
-  --tilt-scale: 0.4;
   order: 2;
   width: min(100%, 300px);
   max-width: 300px;
