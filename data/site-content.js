@@ -23,6 +23,7 @@ export default {
     avatar: "assets/images/zeyi-hero.jpg",
   },
   links: {
+    mail: "mailto:zeyi.li@u.nus.edu",
     linkedin: "https://www.linkedin.com/in/lizeyi/",
     github: "https://github.com/1izeyi",
     huggingface: "https://huggingface.co/1izeyi",
@@ -30,6 +31,7 @@ export default {
     cv: "",
   },
   heroActions: [
+    { label: "Email", type: "external", key: "mail", style: "secondary", icon: "mail" },
     { label: "LinkedIn", type: "external", key: "linkedin", style: "secondary", icon: "linkedin" },
     { label: "GitHub", type: "external", key: "github", style: "secondary", icon: "github" },
     { label: "Hugging Face", type: "external", key: "huggingface", style: "secondary", icon: "huggingface" },
